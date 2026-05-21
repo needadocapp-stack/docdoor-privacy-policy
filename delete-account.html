@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delete Account – DocDoor</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f5f7fa;
+      color: #1a1a2e;
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+      color: #fff;
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+
+    header .logo {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    header .logo span { color: #90caf9; }
+
+    header p {
+      margin-top: 8px;
+      font-size: 0.95rem;
+      opacity: 0.85;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 16px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 20px;
+      padding: 4px 16px;
+      font-size: 0.8rem;
+      letter-spacing: 0.4px;
+    }
+
+    main {
+      max-width: 820px;
+      margin: 40px auto;
+      padding: 0 20px 60px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      padding: 36px 40px;
+      margin-bottom: 24px;
+    }
+
+    .card:first-child { border-top: 4px solid #1565c0; }
+
+    h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #1565c0;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2 .icon {
+      width: 28px;
+      height: 28px;
+      background: #e3f2fd;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #0d47a1;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    h3:first-child { margin-top: 0; }
+
+    p { margin-bottom: 12px; font-size: 0.95rem; color: #374151; }
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+
+    ul li {
+      font-size: 0.95rem;
+      color: #374151;
+      margin-bottom: 8px;
+    }
+
+    ul li strong { color: #1a1a2e; }
+
+    ol {
+      padding-left: 25px;
+      margin-bottom: 16px;
+    }
+
+    ol li {
+      font-size: 0.95rem;
+      color: #374151;
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+
+    ol li strong { color: #1a1a2e; }
+
+    .highlight-box {
+      background: #e3f2fd;
+      border-left: 4px solid #1565c0;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: 0.9rem;
+      color: #1a237e;
+    }
+
+    .warning-box {
+      background: #fff3e0;
+      border-left: 4px solid #f57c00;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: 0.9rem;
+      color: #e65100;
+    }
+
+    .success-box {
+      background: #e8f5e9;
+      border-left: 4px solid #4caf50;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: 0.9rem;
+      color: #1b5e20;
+    }
+
+    .steps-container {
+      background: #f9f9f9;
+      border-radius: 8px;
+      padding: 24px;
+      margin: 16px 0;
+    }
+
+    .step {
+      margin-bottom: 20px;
+      display: flex;
+      gap: 16px;
+    }
+
+    .step:last-child { margin-bottom: 0; }
+
+    .step-number {
+      background: #1565c0;
+      color: #fff;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .step-content {
+      flex: 1;
+    }
+
+    .step-content strong {
+      color: #0d47a1;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .step-content p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #374151;
+    }
+
+    .contact-box {
+      background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+      border-radius: 12px;
+      color: #fff;
+      padding: 32px 40px;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .contact-box h2 {
+      color: #fff;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .contact-box h2 .icon {
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+    }
+
+    .contact-box p { color: rgba(255,255,255,0.85); }
+
+    .contact-box a {
+      display: inline-block;
+      margin-top: 14px;
+      background: #fff;
+      color: #1565c0;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 10px 28px;
+      border-radius: 24px;
+      font-size: 0.95rem;
+      transition: opacity 0.2s;
+    }
+
+    .contact-box a:hover { opacity: 0.85; }
+
+    .table-wrapper {
+      overflow-x: auto;
+      margin: 16px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+
+    table thead {
+      background: #e3f2fd;
+    }
+
+    table th {
+      padding: 12px;
+      text-align: left;
+      font-weight: 600;
+      color: #0d47a1;
+      border: 1px solid #bbdefb;
+    }
+
+    table td {
+      padding: 12px;
+      border: 1px solid #e3f2fd;
+      color: #374151;
+    }
+
+    table tbody tr:nth-child(odd) {
+      background: #f5f5f5;
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #e3f2fd;
+      padding-bottom: 20px;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .faq-question {
+      font-weight: 600;
+      color: #0d47a1;
+      margin-bottom: 8px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .faq-question::before {
+      content: "▶ ";
+      margin-right: 8px;
+      transition: transform 0.3s;
+      display: inline-block;
+    }
+
+    .faq-answer {
+      color: #374151;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.82rem;
+      color: #9ca3af;
+      padding-bottom: 40px;
+    }
+
+    footer strong { color: #6b7280; }
+
+    @media (max-width: 600px) {
+      .card { padding: 24px 20px; }
+      .contact-box { padding: 24px 20px; }
+      header .logo { font-size: 1.8rem; }
+      h2 { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Doc<span>Door</span></div>
+  <p>Your trusted doctor appointment platform</p>
+  <span class="badge">Account Deletion Guide</span>
+</header>
+
+<main>
+
+  <!-- Quick Start -->
+  <div class="card">
+    <h2><span class="icon">🗑️</span>Delete Your Account</h2>
+    <p>
+      DocDoor allows you to permanently delete your account at any time. This guide explains how to delete your account,
+      what happens to your data, and how to contact us if you need assistance.
+    </p>
+    <div class="highlight-box">
+      <strong>Important:</strong> Account deletion is permanent and cannot be undone. All your data, appointments, and profile information will be removed from DocDoor.
+    </div>
+  </div>
+
+  <!-- How to Delete -->
+  <div class="card">
+    <h2><span class="icon">📱</span>How to Delete Your Account</h2>
+
+    <h3>Method 1: Delete via the App (Recommended)</h3>
+    <p>Follow these steps to delete your account directly from the DocDoor app:</p>
+
+    <div class="steps-container">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <strong>Open the DocDoor App</strong>
+          <p>Launch the app on your device and log in with your credentials if needed.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <strong>Navigate to Your Profile</strong>
+          <p>Tap the profile icon (usually in the bottom navigation bar or top-right corner) to access your profile menu.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <strong>Find Settings or Account Options</strong>
+          <p>Look for "Settings," "Account," or "Profile Settings" option in the menu.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <strong>Select Delete Account</strong>
+          <p>Scroll down to find the "Delete Account" or "Remove Account" button (usually in red text or warning section).</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">5</div>
+        <div class="step-content">
+          <strong>Confirm Your Decision</strong>
+          <p>A confirmation dialog will appear. Read the warning message carefully, then tap "Delete" or "Confirm" to proceed.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">6</div>
+        <div class="step-content">
+          <strong>Enter Your Password or Verify Identity</strong>
+          <p>You may be asked to enter your password or verify your phone number for security purposes.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">7</div>
+        <div class="step-content">
+          <strong>Account Deletion Complete</strong>
+          <p>You will be logged out and returned to the login screen. Your account is now permanently deleted.</p>
+        </div>
+      </div>
+    </div>
+
+    <h3>Method 2: Delete via Google Play Store</h3>
+    <p>If you cannot access the app, you can request account deletion through Google Play Store:</p>
+    <ol>
+      <li>Open <strong>Google Play Store</strong></li>
+      <li>Search for <strong>"DocDoor"</strong></li>
+      <li>Tap on the app → <strong>About this app</strong></li>
+      <li>Tap the <strong>⋮ (three dots)</strong> menu</li>
+      <li>Select <strong>"Report an issue"</strong></li>
+      <li>Request account deletion with your email address</li>
+      <li>We will process your request within 30 days</li>
+    </ol>
+
+    <h3>Method 3: Contact Our Support Team</h3>
+    <p>You can also request account deletion by contacting us directly:</p>
+    <div class="highlight-box">
+      <strong>Email:</strong> <a href="mailto:support.docdoor@gmail.com">support.docdoor@gmail.com</a><br/>
+      <strong>Subject:</strong> "Account Deletion Request"<br/>
+      <strong>Include in your email:</strong> Your registered email address and full name
+    </div>
+  </div>
+
+  <!-- What Happens -->
+  <div class="card">
+    <h2><span class="icon">⚠️</span>What Happens When You Delete Your Account</h2>
+
+    <h3>Data Deleted Immediately</h3>
+    <ul>
+      <li>Your account profile (name, email, phone number)</li>
+      <li>Profile photo and uploaded images</li>
+      <li>Authentication tokens and session data</li>
+      <li>Local app data on your device</li>
+      <li>Device tokens (push notification access)</li>
+    </ul>
+
+    <h3>Appointment Data</h3>
+    <ul>
+      <li>Future appointments are cancelled</li>
+      <li>Doctors and hospitals are notified of cancellations</li>
+      <li>Past appointment records are anonymized (not deleted for medical record retention)</li>
+      <li>Any consultation fees paid are non-refundable</li>
+    </ul>
+
+    <h3>Data Retention for Compliance</h3>
+    <p>For legal and regulatory reasons, we may retain anonymized records for:</p>
+    <ul>
+      <li>Medical and healthcare compliance (medical council regulations)</li>
+      <li>Financial audit trails (payment records, anonymized)</li>
+      <li>Fraud prevention and security</li>
+      <li>Duration: Up to 7 years as per Indian regulations</li>
+    </ul>
+
+    <div class="warning-box">
+      <strong>⚠️ Important:</strong> Even after account deletion, anonymized appointment history may be retained for legal compliance. Personal identifiers (name, email, phone) are removed.
+    </div>
+  </div>
+
+  <!-- What You Cannot Recover -->
+  <div class="card">
+    <h2><span class="icon">🚫</span>What You Cannot Recover</h2>
+
+    <p>Once your account is deleted, the following cannot be recovered:</p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Actions</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Account Credentials</strong></td>
+            <td>Cannot re-register with same email immediately</td>
+            <td>You may register again after 30 days</td>
+          </tr>
+          <tr>
+            <td><strong>Appointment History</strong></td>
+            <td>Cannot be recovered</td>
+            <td>You can request records for medical purposes</td>
+          </tr>
+          <tr>
+            <td><strong>Reviews & Ratings</strong></td>
+            <td>Deleted permanently</td>
+            <td>Doctors lose your feedback</td>
+          </tr>
+          <tr>
+            <td><strong>Profile Photos</strong></td>
+            <td>Deleted from servers</td>
+            <td>Backups may exist (compliant with privacy)</td>
+          </tr>
+          <tr>
+            <td><strong>Saved Doctors/Favorites</strong></td>
+            <td>All favorites deleted</td>
+            <td>Start fresh after re-registration</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Frequently Asked Questions -->
+  <div class="card">
+    <h2><span class="icon">❓</span>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-question">Can I recover my deleted account?</div>
+      <div class="faq-answer">
+        No, account deletion is permanent. Your data cannot be recovered after deletion. However, you can create a new account after 30 days using the same email address.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Will my appointments be cancelled if I delete my account?</div>
+      <div class="faq-answer">
+        Yes, all future appointments will be automatically cancelled, and the assigned doctors will be notified. Patients who booked with you (if you're a doctor) will also be notified of the cancellation.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Will I get a refund if I delete my account?</div>
+      <div class="faq-answer">
+        No, consultation fees and any paid services are non-refundable. However, you can cancel individual appointments before deletion to potentially get refunds based on cancellation policies.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How long does account deletion take?</div>
+      <div class="faq-answer">
+        Account deletion is processed immediately in the app. However, it may take up to 24-48 hours for all associated data to be fully removed from backup systems.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Will my identity verification documents be deleted?</div>
+      <div class="faq-answer">
+        For doctors: Identity verification documents (Aadhaar, medical certificates) are deleted from your profile immediately. However, anonymized records may be retained for 7 years for compliance with medical council regulations.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Can I delete my account if I'm a doctor with active appointments?</div>
+      <div class="faq-answer">
+        Yes, but all your active appointments will be cancelled. Notify your patients beforehand and ensure continuity of their care. Admin staff may contact you to ensure proper handover.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Will my data be shared with third parties after deletion?</div>
+      <div class="faq-answer">
+        No, your personal data will not be shared with anyone after deletion. Firebase and Google services will stop receiving your device tokens immediately.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Can I export my data before deleting my account?</div>
+      <div class="faq-answer">
+        You can request a complete data export by contacting us at <a href="mailto:support.docdoor@gmail.com">support.docdoor@gmail.com</a>. Include "Data Export Request" in the subject line. We'll provide your data in JSON or CSV format within 7 days.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">What if I encounter an error during deletion?</div>
+      <div class="faq-answer">
+        If the in-app deletion fails, try the Google Play Store method or contact our support team at <a href="mailto:support.docdoor@gmail.com">support.docdoor@gmail.com</a>. Include your account email and the error message you received.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">When can I re-register with the same email?</div>
+      <div class="faq-answer">
+        After 30 days of account deletion, you can register a new account using the same email address. This delay is to prevent accidental re-registration and to ensure complete data purge from systems.
+      </div>
+    </div>
+  </div>
+
+  <!-- Before You Delete -->
+  <div class="card">
+    <h2><span class="icon">✅</span>Before You Delete – Checklist</h2>
+
+    <p>Consider these steps before deleting your account:</p>
+
+    <ul>
+      <li><strong>Export Your Data:</strong> Request a data export if you need records for medical purposes</li>
+      <li><strong>Cancel Appointments:</strong> Individually cancel upcoming appointments to avoid cancellation by deletion</li>
+      <li><strong>Download Receipts:</strong> Save any payment receipts or appointment confirmations</li>
+      <li><strong>Notify Doctors:</strong> If you're a doctor, inform your patients about closing your practice</li>
+      <li><strong>Request Refunds:</strong> Check if any appointments are eligible for refunds under our cancellation policy</li>
+      <li><strong>Archive Important Info:</strong> Take screenshots of important appointment or medical history data</li>
+    </ul>
+
+    <div class="success-box">
+      <strong>💡 Tip:</strong> If you're just taking a break, consider deactivating your account instead (if available) rather than permanently deleting it.
+    </div>
+  </div>
+
+  <!-- Alternatives to Deletion -->
+  <div class="card">
+    <h2><span class="icon">🔄</span>Alternatives to Account Deletion</h2>
+
+    <p>If you're considering deletion, these alternatives might be helpful:</p>
+
+    <h3>Temporarily Disable Your Profile</h3>
+    <p>Take a break without losing your data. Contact us to temporarily hide your profile or disable notifications.</p>
+
+    <h3>Change Your Privacy Settings</h3>
+    <ul>
+      <li>Disable location services</li>
+      <li>Turn off push notifications</li>
+      <li>Opt-out of recommended doctors</li>
+      <li>Hide your profile from public search</li>
+    </ul>
+
+    <h3>Update Your Information</h3>
+    <p>Update your email, phone number, or password to secure your account. You can also remove your profile photo.</p>
+
+    <h3>Contact Support First</h3>
+    <p>If you have concerns or issues, reach out to us before deleting. We may be able to help!</p>
+  </div>
+
+  <!-- Contact Support -->
+  <div class="contact-box">
+    <h2><span class="icon">✉️</span>Need Help?</h2>
+    <p>If you have questions about account deletion or need assistance, please contact our support team.</p>
+    <p style="margin-top:8px;"><strong style="color:#fff;">Divya Tech Support</strong></p>
+    <a href="mailto:support.docdoor@gmail.com">support.docdoor@gmail.com</a>
+    <p style="margin-top: 16px; font-size: 0.85rem;">Response time: Within 24 hours</p>
+  </div>
+
+  <!-- Legal Notice -->
+  <div class="card">
+    <h2><span class="icon">⚖️</span>Legal Information</h2>
+
+    <p>
+      <strong>Data Retention:</strong> Even after deletion, DocDoor may retain anonymized data for 7 years in compliance with:
+    </p>
+    <ul>
+      <li>Indian Medical Council Regulations</li>
+      <li>Ministry of Health and Family Welfare Guidelines</li>
+      <li>Financial audit and compliance requirements</li>
+      <li>Fraud prevention and security</li>
+    </ul>
+
+    <p style="margin-top: 16px;">
+      <strong>Right to be Forgotten:</strong> You have the right to request complete data deletion. After initial deletion,
+      you may request purge of anonymized records by contacting <a href="mailto:support.docdoor@gmail.com">support.docdoor@gmail.com</a>.
+    </p>
+
+    <p style="margin-top: 16px;">
+      For more information about data handling, please review our <a href="privacy_policy.html">Privacy Policy</a>.
+    </p>
+  </div>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 <strong>Divya Tech</strong>. All rights reserved. &nbsp;·&nbsp; DocDoor v1.1</p>
+  <p style="margin-top: 8px;"><a href="privacy_policy.html">Privacy Policy</a> · <a href="account_deletion_guide.html">Account Deletion Guide</a></p>
+</footer>
+
+</body>
+</html>
+
