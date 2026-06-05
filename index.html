@@ -1,125 +1,394 @@
-ubuntu@instance-20260405-0039:~$ ls
-app.log  docdoor-old.jar  docdoor.jar  files  logs  newfiles  oldfiles
-ubuntu@instance-20260405-0039:~$ 
-ubuntu@instance-20260405-0039:~$ 
-ubuntu@instance-20260405-0039:~$ stat
-stat: missing operand
-Try 'stat --help' for more information.
-ubuntu@instance-20260405-0039:~$ ls -lathr
-total 268M
--rw-r--r-- 1 ubuntu ubuntu  807 Mar 31  2024 .profile
--rw-r--r-- 1 ubuntu ubuntu 3.7K Mar 31  2024 .bashrc
--rw-r--r-- 1 ubuntu ubuntu  220 Mar 31  2024 .bash_logout
-drwxr-xr-x 4 root   root   4.0K Apr  4 19:13 ..
-drwx------ 2 ubuntu ubuntu 4.0K Apr  4 19:13 .ssh
-drwx------ 2 ubuntu ubuntu 4.0K Apr  4 19:15 .cache
--rw-r--r-- 1 ubuntu ubuntu    0 Apr  4 19:16 .sudo_as_admin_successful
-drwxrwxr-x 2 ubuntu ubuntu 4.0K Apr  5 08:31 oldfiles
-drwxrwxr-x 2 ubuntu ubuntu 4.0K Apr  5 08:55 newfiles
--rw------- 1 ubuntu ubuntu 3.5K Apr 26 09:48 .viminfo
-drwxrwxr-x 2 ubuntu ubuntu 4.0K May 21 17:17 files
-drwxrwxr-x 4 ubuntu ubuntu 4.0K May 24 18:30 logs
--rw-rw-r-- 1 ubuntu ubuntu 119K May 25 05:15 app.log
--rw-r--r-- 1 ubuntu ubuntu 134M Jun  4 16:37 docdoor-old.jar
--rw------- 1 ubuntu ubuntu  27K Jun  4 16:45 .bash_history
--rw-r--r-- 1 ubuntu ubuntu 134M Jun  5 18:37 docdoor.jar
-drwxr-x--- 8 ubuntu ubuntu 4.0K Jun  5 18:37 .
-ubuntu@instance-20260405-0039:~$ exit
-logout
-Connection to 161.118.163.191 closed.
-purushottamgaudel@Purushottams-Mac-mini jars % 
-purushottamgaudel@Purushottams-Mac-mini jars % cd
-purushottamgaudel@Purushottams-Mac-mini ~ % cd Desktop 
-purushottamgaudel@Purushottams-Mac-mini Desktop % clear
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-purushottamgaudel@Purushottams-Mac-mini Desktop % open privacy_policy.html 
-purushottamgaudel@Purushottams-Mac-mini Desktop % open privacy_policy     
-The file /Users/purushottamgaudel/Desktop/privacy_policy does not exist.
-purushottamgaudel@Purushottams-Mac-mini Desktop % vi privacy_policy.html
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DocDoor – Privacy Policy</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f5f7fa;
+      color: #1a1a2e;
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+      color: #fff;
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+
+    header .logo {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    header .logo span { color: #90caf9; }
+
+    header p {
+      margin-top: 8px;
+      font-size: 0.95rem;
+      opacity: 0.85;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 16px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 20px;
+      padding: 4px 16px;
+      font-size: 0.8rem;
+      letter-spacing: 0.4px;
+    }
+
+    main {
+      max-width: 820px;
+      margin: 40px auto;
+      padding: 0 20px 60px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      padding: 36px 40px;
+      margin-bottom: 24px;
+    }
+
+    .card:first-child { border-top: 4px solid #1565c0; }
+
+    h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #1565c0;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2 .icon {
+      width: 28px;
+      height: 28px;
+      background: #e3f2fd;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+
+    h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin: 20px 0 8px;
+      padding: 6px 12px;
+      background: #f0f4f8;
+      border-radius: 6px;
+      border-left: 3px solid #1565c0;
+    }
+
+    p { margin-bottom: 12px; font-size: 0.95rem; color: #374151; }
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+
+    ul li {
+      font-size: 0.95rem;
+      color: #374151;
+      margin-bottom: 6px;
+    }
+
+    ul li strong { color: #1a1a2e; }
+
+    .highlight-box {
+      background: #e3f2fd;
+      border-left: 4px solid #1565c0;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: 0.9rem;
+      color: #1a237e;
+    }
+
+    .note-box {
+      background: #fff8e1;
+      border-left: 4px solid #f59e0b;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: 0.9rem;
+      color: #78350f;
+    }
+
+    .role-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 12px;
+      margin-bottom: 8px;
+    }
+
+    .role-all    { background: #e3f2fd; color: #1565c0; }
+    .role-patient { background: #e8f5e9; color: #2e7d32; }
+    .role-doctor  { background: #fce4ec; color: #c62828; }
+    .role-hospital { background: #f3e5f5; color: #6a1b9a; }
+
+    .contact-box {
+      background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+      border-radius: 12px;
+      color: #fff;
+      padding: 32px 40px;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .contact-box h2 {
+      color: #fff;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .contact-box p { color: rgba(255,255,255,0.85); }
+
+    .contact-box a {
+      display: inline-block;
+      margin-top: 14px;
+      background: #fff;
+      color: #1565c0;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 10px 28px;
+      border-radius: 24px;
+      font-size: 0.95rem;
+      transition: opacity 0.2s;
+    }
+
+    .contact-box a:hover { opacity: 0.85; }
+
+    footer {
+      text-align: center;
+      font-size: 0.82rem;
+      color: #9ca3af;
+      padding-bottom: 40px;
+    }
+
+    footer strong { color: #6b7280; }
+
+    @media (max-width: 600px) {
+      .card { padding: 24px 20px; }
+      .contact-box { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Doc<span>Door</span></div>
+  <p>Your trusted doctor appointment platform</p>
+  <span class="badge">Privacy Policy</span>
+</header>
+
+<main>
+
+  <!-- Intro -->
+  <div class="card">
+    <h2><span class="icon">📋</span>Introduction</h2>
+    <p>
+      Welcome to <strong>DocDoor</strong>, operated by <strong>Divya Tech</strong>. We are committed to
+      protecting your personal information and your right to privacy. This Privacy Policy explains how we
+      collect, use, and safeguard your information when you use our mobile application — whether you
+      are a <strong>Patient</strong>, <strong>Doctor</strong>, or <strong>Hospital Admin</strong>.
+    </p>
+    <p>
+      By using DocDoor, you agree to the collection and use of information as described in this policy.
+      If you do not agree, please discontinue use of the app.
+    </p>
+    <div class="highlight-box">
+      <strong>Effective Date:</strong> May 21, 2025 &nbsp;·&nbsp; <strong>Last Updated:</strong> May 21, 2026
+    </div>
+  </div>
+
+  <!-- Section 1: Information We Collect -->
+  <div class="card">
+    <h2><span class="icon">🗂️</span>1. Information We Collect</h2>
+    <p>The information we collect depends on the role you use the app as. All roles share the items listed under <em>All Users</em> below, and each role has additional role-specific data.</p>
+
+    <h3><span class="role-tag role-all">All Users</span></h3>
+    <ul>
+      <li><strong>Full name</strong></li>
+      <li><strong>Mobile number</strong> — used as your primary login ID</li>
+      <li><strong>Email address</strong></li>
+      <li><strong>Profile picture</strong> — optional, only if you choose to upload one</li>
+      <li><strong>State and district</strong> of residence</li>
+      <li><strong>Account status flags</strong> (active / verified / role)</li>
+      <li><strong>Device and login information</strong> — device type, OS version, login timestamps</li>
+      <li><strong>App usage data</strong> — screens visited, features used (for support and debugging)</li>
+      <li><strong>Push notification device token</strong> — so we can send you appointment and system alerts</li>
+      <li><strong>Aadhaar verification status</strong> — we only store a yes/no flag. Your Aadhaar number and images are processed by the UIDAI-verified provider and discarded by us.</li>
+    </ul>
+    <div class="note-box">We do <strong>not</strong> collect medical records, diagnoses, prescriptions, or any clinical health data.</div>
+
+    <h3><span class="role-tag role-patient">Patient</span></h3>
+    <ul>
+      <li>Appointment history (dates, times, assigned doctor or hospital, status, your notes)</li>
+      <li>Reviews and ratings you leave for doctors or hospitals</li>
+      <li>Bookmarks (doctors / hospitals you save for later)</li>
+      <li>Identity verification state (mobile OTP verification, email verification)</li>
+      <li>No-show / cancellation history (used for the freeze-on-repeat-no-show policy)</li>
+    </ul>
+
+    <h3><span class="role-tag role-doctor">Doctor</span></h3>
+    <p><strong>Medical / professional credentials:</strong></p>
+    <ul>
+      <li>Medical council licence / registration number</li>
+      <li>Specialisation (e.g. General Medicine, Cardiology) and specialisation ID</li>
+      <li>Qualifications (e.g. MBBS, MD), years of experience, bio (optional), languages spoken</li>
+    </ul>
+    <p><strong>Practice location:</strong></p>
+    <ul>
+      <li>State, district, and subdivision / taluk / block</li>
+      <li>Clinic or hospital name and full street address (if you add practice details)</li>
+      <li>Consultation fee, consultation type(s), working days and hours</li>
+    </ul>
+    <p><strong>Identity verification documents (mandatory):</strong></p>
+    <ul>
+      <li>Aadhaar QR code image (used to confirm name and date of birth; stored for audit purposes)</li>
+      <li>Medical council registration certificate (uploaded by you)</li>
+      <li>Matching flags (name matched with Aadhaar, DOB matched, registration type, state council)</li>
+    </ul>
+    <p><strong>Availability and bookings:</strong></p>
+    <ul>
+      <li>Availability slots, daily slots, follow-up slots, urgent-booking flags</li>
+      <li>Appointments booked with you (patient name, phone, date/time, status, notes, review)</li>
+      <li>Free-up / cancellation reasons, walk-in reservations, reviews and ratings from patients</li>
+      <li>Aggregated statistics (average rating, total reviews, total appointments, verification badge)</li>
+    </ul>
+    <p><strong>Admin support:</strong> If a platform admin acts on your account for support, the action and reason are logged.</p>
+
+    <h3><span class="role-tag role-hospital">Hospital Admin</span></h3>
+    <ul>
+      <li>Personal account data (same as All Users)</li>
+      <li>Hospital profile: name, description, phone, email, logo, full address, state, district, pincode, latitude/longitude, verification status</li>
+      <li>Hospital–doctor associations: invitations sent, per-doctor consultation fee overrides</li>
+      <li>Hospital availability: day-wise and date-range availability, slot duration, capacity, booking counts</li>
+      <li>Hospital appointments and operations: patient appointments, prescriptions, payments (amount, status, gateway, transaction ID, refund details), walk-in reservations, free-up actions</li>
+      <li>Aggregated hospital statistics and admin / impersonation logs</li>
+    </ul>
+  </div>
+
+  <!-- Section 2: Why We Collect It -->
+  <div class="card">
+    <h2><span class="icon">⚙️</span>2. Why We Collect It</h2>
+    <p>Your information is used solely for:</p>
+    <ul>
+      <li>Account creation, authentication, and role-based access control</li>
+      <li>Identity validation (mobile OTP, email verification, Aadhaar-based identity verification for doctors, hospital verification for hospital admins)</li>
+      <li>Helping patients find and book the right doctor or hospital</li>
+      <li>Appointment booking, management, reminders (SMS, email, push), and follow-ups</li>
+      <li>Processing payments, refunds, and consultation fees</li>
+      <li>Detecting fraud, abuse, and repeat no-shows</li>
+      <li>Customer and technical support</li>
+      <li>Internal analytics in aggregate form to improve the service</li>
+    </ul>
+    <div class="note-box">Your data is <strong>never</strong> used for advertising, behavioural profiling, or any commercial purpose unrelated to this service.</div>
+  </div>
+
+  <!-- Section 3: How We Protect It -->
+  <div class="card">
+    <h2><span class="icon">🔒</span>3. How We Protect It</h2>
+    <p>We apply industry-standard security measures across all systems:</p>
+    <ul>
+      <li>All data transmitted between your device and our servers is encrypted using <strong>TLS 1.2 or higher</strong>.</li>
+      <li>Data stored at rest is protected with <strong>AES-256 encryption</strong>.</li>
+      <li>Passwords are never stored in plain text — they are hashed using <strong>bcrypt with a unique salt</strong>.</li>
+      <li>Access to authentication records is restricted to role-authorised internal services only.</li>
+      <li>Identity verification images (Aadhaar QR, medical certificate) are stored encrypted and accessible only to the verification workflow and authorised reviewers.</li>
+      <li>Regular security audits and vulnerability assessments are performed.</li>
+    </ul>
+  </div>
+
+  <!-- Section 4: Who We Share It With -->
+  <div class="card">
+    <h2><span class="icon">🤝</span>4. Who We Share It With</h2>
+    <p>We share your data only where strictly necessary, and only with the parties relevant to your role:</p>
+
+    <h3><span class="role-tag role-all">All Users</span></h3>
+    <ul>
+      <li><strong>SMS / email / push notification providers</strong> — receive your phone number, email, or device token solely to deliver appointment reminders and important alerts on our behalf.</li>
+      <li><strong>Encrypted cloud infrastructure</strong> — data is stored in secure, encrypted cloud environments.</li>
+    </ul>
+
+    <h3><span class="role-tag role-patient">Patient</span></h3>
+    <ul>
+      <li><strong>Your assigned doctor or hospital</strong> — receives your appointment details (date, time, and any notes you provide).</li>
+      <li><strong>Other patients (anonymously)</strong> — see only anonymised statistics on doctor / hospital profiles (e.g. average rating, total reviews).</li>
+    </ul>
+
+    <h3><span class="role-tag role-doctor">Doctor</span></h3>
+    <ul>
+      <li><strong>Patients searching for a doctor</strong> — see your public profile: name, specialisation, qualifications, years of experience, languages, bio (if public), state, district, consultation fee, working days/hours, average rating, and total reviews.</li>
+      <li><strong>The hospital admin you associate with</strong> — sees your professional details and per-doctor availability at that hospital.</li>
+      <li><strong>The patient who books with you</strong> — sees appointment details and can leave a review.</li>
+    </ul>
+
+    <h3><span class="role-tag role-hospital">Hospital Admin</span></h3>
+    <ul>
+      <li><strong>Patients searching for hospitals</strong> — see your public hospital profile: name, description, logo, address, state, district, pincode, verification status, and associated doctors.</li>
+      <li><strong>Doctors you invite</strong> — see your invitation notes and hospital name.</li>
+      <li><strong>Patients who book at your hospital</strong> — see your hospital name, address, and the relevant doctor for their slot.</li>
+    </ul>
+
+    <div class="note-box">We <strong>never</strong> sell, rent, trade, or otherwise disclose your personal data to any third party for their own purposes.</div>
+  </div>
+
+  <!-- Section 5: Your Rights -->
+  <div class="card">
+    <h2><span class="icon">✅</span>5. Your Rights</h2>
+    <p>You have the following rights over your personal data at any time, regardless of your role (patient, doctor, or hospital admin):</p>
+    <ul>
+      <li><strong>View</strong> — request a copy of the data we hold about you.</li>
+      <li><strong>Correct</strong> — request correction of inaccurate or incomplete data.</li>
+      <li><strong>Export</strong> — receive your data in a portable format.</li>
+      <li><strong>Freeze</strong> — your account may be temporarily frozen if repeated no-shows are detected (applies to patients booking appointments). During a freeze, you may view existing appointments but cannot book new ones. Strike history is tied to your phone number and persists across account deletion.</li>
+      <li>
+        <strong>Delete</strong> — request deletion of your account.
+        <ul style="margin-top:6px;">
+          <li>Appointments past the cancellation window will not be auto-cancelled and will proceed as scheduled (marked as no-show if you do not attend).</li>
+          <li>Appointments outside the cancellation window are cancelled automatically.</li>
+          <li>Re-registration with the same credentials is restricted for <strong>30 days</strong>.</li>
+          <li>Past appointment records (date, time, status, rating) are retained in anonymised form for the other party's reference.</li>
+          <li>Personally identifying details (name, phone, email, profile picture, Aadhaar data) are removed within <strong>30 days</strong>.</li>
+        </ul>
+      </li>
+    </ul>
+    <div class="note-box">
+      For <strong>doctors and hospital admins</strong>, deleting your account does not automatically remove appointment, prescription, payment, or review records you created — those are retained in anonymised form so the other party keeps an accurate history.
+    </div>
+    <p>To exercise any of these rights, go to <strong>Settings → Privacy</strong> within the app, or contact us directly at <a href="mailto:support.docdoor@gmail.com">support.docdoor@gmail.com</a>. We will respond within <strong>5 business days</strong>.</p>
+  </div>
+
+  <!-- Section 6: Retention -->
+  <div class="card">
+    <h2><span class="icon">🗓️</span>6. Retention</h2>
+    <p>Upon account deletion, the following applies for all roles — patient, doctor, and hospital admin:</p>
+    <ul>
+      <li>Future appointments are cancelled immediately and the account is deactivated.</li>
+      <li>Personally identifying information (name, phone number, email, profile picture, Aadhaar data, identity verification images) is permanently erased within <strong>30 days</strong> of deletion.</li>
+      <li>Appointment history visible to the other party (doctor, patient, or hospital) is retained with the identity shown as <em>"Deleted User"</em> after 30 days.</li>
       <li>Review ratings are retained anonymously to preserve doctor rating integrity; review comments are removed after <strong>30 days</strong>.</li>
       <li>Prescriptions, payment records, and audit logs are retained for up to <strong>7 years</strong> as required by financial and medical regulations, with personal identifiers removed after 30 days.</li>
       <li>Hospital profiles created by a hospital admin are deactivated and personal contact details erased; anonymised aggregate statistics may be retained.</li>
@@ -178,4 +447,3 @@ purushottamgaudel@Purushottams-Mac-mini Desktop % vi privacy_policy.html
 
 </body>
 </html>
-
