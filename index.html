@@ -1,258 +1,129 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DocDoor – Privacy Policy</title>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ubuntu@instance-20260405-0039:~$ ls
+app.log  docdoor-old.jar  docdoor.jar  files  logs  newfiles  oldfiles
+ubuntu@instance-20260405-0039:~$ 
+ubuntu@instance-20260405-0039:~$ 
+ubuntu@instance-20260405-0039:~$ stat
+stat: missing operand
+Try 'stat --help' for more information.
+ubuntu@instance-20260405-0039:~$ ls -lathr
+total 268M
+-rw-r--r-- 1 ubuntu ubuntu  807 Mar 31  2024 .profile
+-rw-r--r-- 1 ubuntu ubuntu 3.7K Mar 31  2024 .bashrc
+-rw-r--r-- 1 ubuntu ubuntu  220 Mar 31  2024 .bash_logout
+drwxr-xr-x 4 root   root   4.0K Apr  4 19:13 ..
+drwx------ 2 ubuntu ubuntu 4.0K Apr  4 19:13 .ssh
+drwx------ 2 ubuntu ubuntu 4.0K Apr  4 19:15 .cache
+-rw-r--r-- 1 ubuntu ubuntu    0 Apr  4 19:16 .sudo_as_admin_successful
+drwxrwxr-x 2 ubuntu ubuntu 4.0K Apr  5 08:31 oldfiles
+drwxrwxr-x 2 ubuntu ubuntu 4.0K Apr  5 08:55 newfiles
+-rw------- 1 ubuntu ubuntu 3.5K Apr 26 09:48 .viminfo
+drwxrwxr-x 2 ubuntu ubuntu 4.0K May 21 17:17 files
+drwxrwxr-x 4 ubuntu ubuntu 4.0K May 24 18:30 logs
+-rw-rw-r-- 1 ubuntu ubuntu 119K May 25 05:15 app.log
+-rw-r--r-- 1 ubuntu ubuntu 134M Jun  4 16:37 docdoor-old.jar
+-rw------- 1 ubuntu ubuntu  27K Jun  4 16:45 .bash_history
+-rw-r--r-- 1 ubuntu ubuntu 134M Jun  5 18:37 docdoor.jar
+drwxr-x--- 8 ubuntu ubuntu 4.0K Jun  5 18:37 .
+ubuntu@instance-20260405-0039:~$ exit
+logout
+Connection to 161.118.163.191 closed.
+purushottamgaudel@Purushottams-Mac-mini jars % 
+purushottamgaudel@Purushottams-Mac-mini jars % cd
+purushottamgaudel@Purushottams-Mac-mini ~ % cd Desktop 
+purushottamgaudel@Purushottams-Mac-mini Desktop % clear
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: #f5f7fa;
-      color: #1a1a2e;
-      line-height: 1.7;
-    }
 
-    header {
-      background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
-      color: #fff;
-      padding: 48px 24px 40px;
-      text-align: center;
-    }
 
-    header .logo {
-      font-size: 2.2rem;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-    }
 
-    header .logo span { color: #90caf9; }
 
-    header p {
-      margin-top: 8px;
-      font-size: 0.95rem;
-      opacity: 0.85;
-    }
 
-    .badge {
-      display: inline-block;
-      margin-top: 16px;
-      background: rgba(255,255,255,0.15);
-      border: 1px solid rgba(255,255,255,0.3);
-      border-radius: 20px;
-      padding: 4px 16px;
-      font-size: 0.8rem;
-      letter-spacing: 0.4px;
-    }
 
-    main {
-      max-width: 820px;
-      margin: 40px auto;
-      padding: 0 20px 60px;
-    }
 
-    .card {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-      padding: 36px 40px;
-      margin-bottom: 24px;
-    }
 
-    .card:first-child { border-top: 4px solid #1565c0; }
 
-    h2 {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: #1565c0;
-      margin-bottom: 14px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
 
-    h2 .icon {
-      width: 28px;
-      height: 28px;
-      background: #e3f2fd;
-      border-radius: 6px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.95rem;
-      flex-shrink: 0;
-    }
 
-    p { margin-bottom: 12px; font-size: 0.95rem; color: #374151; }
-    p:last-child { margin-bottom: 0; }
 
-    ul {
-      padding-left: 20px;
-      margin-bottom: 12px;
-    }
 
-    ul li {
-      font-size: 0.95rem;
-      color: #374151;
-      margin-bottom: 6px;
-    }
 
-    ul li strong { color: #1a1a2e; }
 
-    .highlight-box {
-      background: #e3f2fd;
-      border-left: 4px solid #1565c0;
-      border-radius: 0 8px 8px 0;
-      padding: 14px 18px;
-      margin: 16px 0;
-      font-size: 0.9rem;
-      color: #1a237e;
-    }
 
-    .contact-box {
-      background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
-      border-radius: 12px;
-      color: #fff;
-      padding: 32px 40px;
-      text-align: center;
-      margin-bottom: 24px;
-    }
 
-    .contact-box h2 {
-      color: #fff;
-      justify-content: center;
-      margin-bottom: 10px;
-    }
 
-    .contact-box p { color: rgba(255,255,255,0.85); }
 
-    .contact-box a {
-      display: inline-block;
-      margin-top: 14px;
-      background: #fff;
-      color: #1565c0;
-      font-weight: 700;
-      text-decoration: none;
-      padding: 10px 28px;
-      border-radius: 24px;
-      font-size: 0.95rem;
-      transition: opacity 0.2s;
-    }
 
-    .contact-box a:hover { opacity: 0.85; }
 
-    footer {
-      text-align: center;
-      font-size: 0.82rem;
-      color: #9ca3af;
-      padding-bottom: 40px;
-    }
 
-    footer strong { color: #6b7280; }
 
-    @media (max-width: 600px) {
-      .card { padding: 24px 20px; }
-      .contact-box { padding: 24px 20px; }
-    }
-  </style>
-</head>
-<body>
 
-<header>
-  <div class="logo">Doc<span>Door</span></div>
-  <p>Your trusted doctor appointment platform</p>
-  <span class="badge">Privacy Policy</span>
-</header>
 
-<main>
 
-  <!-- Intro -->
-  <div class="card">
-    <h2><span class="icon">📋</span>Introduction</h2>
-    <p>
-      Welcome to <strong>DocDoor</strong>, operated by <strong>Divya Tech</strong>. We are committed to
-      protecting your personal information and your right to privacy. This Privacy Policy explains how we
-      collect, use, and safeguard your information when you use our mobile application.
-    </p>
-    <p>
-      By using DocDoor, you agree to the collection and use of information as described in this policy.
-      If you do not agree, please discontinue use of the app.
-    </p>
-    <div class="highlight-box">
-      <strong>Effective Date:</strong> May 21, 2025 &nbsp;·&nbsp; <strong>Last Updated:</strong> May 21, 2026
-    </div>
-  </div>
 
-  <!-- Information We Collect -->
-  <div class="card">
-    <h2><span class="icon">🗂️</span>Information We Collect</h2>
-    <p>We collect the following categories of information when you register and use DocDoor:</p>
+purushottamgaudel@Purushottams-Mac-mini Desktop % open privacy_policy.html 
+purushottamgaudel@Purushottams-Mac-mini Desktop % open privacy_policy     
+The file /Users/purushottamgaudel/Desktop/privacy_policy does not exist.
+purushottamgaudel@Purushottams-Mac-mini Desktop % vi privacy_policy.html
 
-    <p><strong>Personal Identification</strong></p>
-    <ul>
-      <li><strong>Full name</strong> – used to identify your account</li>
-      <li><strong>Email address</strong> – used for login and notifications</li>
-      <li><strong>Phone number</strong> – used for account verification and contact</li>
-      <li><strong>Profile photo</strong> – uploaded optionally; stored securely on our servers</li>
-    </ul>
 
-    <p><strong>Health &amp; Appointment Information</strong></p>
-    <ul>
-      <li><strong>Appointment history</strong> – doctors visited, dates, and statuses</li>
-      <li><strong>Doctor specialization preferences</strong> – specialties you browse or book</li>
-      <li><strong>User role</strong> – whether you are a Patient, Doctor, or Administrator</li>
-    </ul>
 
-    <p><strong>Doctor-specific Information</strong> (if you register as a Doctor)</p>
-    <ul>
-      <li>Medical specialization, qualifications, and practice details</li>
-      <li>Availability slots and consultation fee</li>
-    </ul>
-  </div>
 
-  <!-- How We Use Your Information -->
-  <div class="card">
-    <h2><span class="icon">⚙️</span>How We Use Your Information</h2>
-    <ul>
-      <li>To <strong>create and manage</strong> your DocDoor account</li>
-      <li>To <strong>facilitate appointment booking</strong> between patients and doctors</li>
-      <li>To <strong>display your profile</strong> to relevant users (e.g., patients viewing doctor profiles)</li>
-      <li>To <strong>send appointment reminders</strong> and status updates</li>
-      <li>To <strong>improve app features</strong> and fix technical issues</li>
-      <li>To <strong>comply with legal obligations</strong> where required</li>
-    </ul>
-    <p>We do <strong>not</strong> sell, rent, or trade your personal information to third parties for marketing purposes.</p>
-  </div>
 
-  <!-- Data Storage & Security -->
-  <div class="card">
-    <h2><span class="icon">🔒</span>Data Storage &amp; Security</h2>
-    <p>
-      Your data is stored on secured servers. Profile photos and other media are stored using cloud
-      storage with access controls. Authentication tokens are stored locally on your device using
-      Android's encrypted DataStore.
-    </p>
-    <p>
-      We implement industry-standard security measures including HTTPS encryption for all data
-      transmitted between the app and our servers. However, no method of transmission over the
-      internet is 100% secure, and we cannot guarantee absolute security.
-    </p>
-    <div class="highlight-box">
-      Your password is <strong>never stored in plain text</strong>. Authentication is handled via
-      secure tokens that expire automatically.
-    </div>
-  </div>
 
-  <!-- Data Sharing -->
-  <div class="card">
-    <h2><span class="icon">🤝</span>Data Sharing</h2>
-    <p>We may share your information only in the following limited circumstances:</p>
-    <ul>
-      <li><strong>With doctors</strong> – patients' names and appointment details are shared with the booked doctor</li>
-      <li><strong>With patients</strong> – doctors' professional profiles (name, specialization, photo, fee) are visible to patients</li>
-      <li><strong>Service providers</strong> – trusted third-party services (e.g., cloud hosting, Firebase for notifications) that operate under strict data protection agreements</li>
-      <li><strong>Legal requirements</strong> – if required by law, court order, or governmental authority</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <li>Review ratings are retained anonymously to preserve doctor rating integrity; review comments are removed after <strong>30 days</strong>.</li>
+      <li>Prescriptions, payment records, and audit logs are retained for up to <strong>7 years</strong> as required by financial and medical regulations, with personal identifiers removed after 30 days.</li>
+      <li>Hospital profiles created by a hospital admin are deactivated and personal contact details erased; anonymised aggregate statistics may be retained.</li>
+      <li>System and access logs (including impersonation actions taken by platform admins) are purged after <strong>12 months</strong>.</li>
     </ul>
   </div>
 
@@ -261,29 +132,13 @@
     <h2><span class="icon">🔗</span>Third-Party Services</h2>
     <p>DocDoor uses the following third-party services that have their own privacy policies:</p>
     <ul>
-      <li><strong>Firebase Cloud Messaging (Google)</strong> – for push notifications</li>
-      <li><strong>Google Play Services</strong> – for app distribution and device authentication</li>
+      <li><strong>Firebase Cloud Messaging (Google)</strong> — for push notifications</li>
+      <li><strong>SMS / email notification providers</strong> — for appointment reminders</li>
+      <li><strong>UIDAI-verified Aadhaar provider</strong> — for identity verification (doctors); Aadhaar numbers and images are processed by the provider and discarded by us</li>
+      <li><strong>Encrypted cloud infrastructure</strong> — for secure data storage</li>
+      <li><strong>Google Play Services</strong> — for app distribution and device authentication</li>
     </ul>
-    <p>
-      We encourage you to review the privacy policies of these services. DocDoor is not responsible
-      for the data practices of third-party providers.
-    </p>
-  </div>
-
-  <!-- Your Rights -->
-  <div class="card">
-    <h2><span class="icon">✅</span>Your Rights</h2>
-    <p>You have the right to:</p>
-    <ul>
-      <li><strong>Access</strong> the personal data we hold about you</li>
-      <li><strong>Update or correct</strong> your profile information at any time within the app</li>
-      <li><strong>Delete your account</strong> and associated data via the Profile screen in the app</li>
-      <li><strong>Withdraw consent</strong> by uninstalling the app and requesting data deletion</li>
-    </ul>
-    <p>
-      To exercise any of these rights or to request a copy of your data, contact us at
-      <a href="mailto:support.docdoor@gmail.com">support.docdoor@gmail.com</a>.
-    </p>
+    <p>We encourage you to review the privacy policies of these services. DocDoor is not responsible for the data practices of third-party providers.</p>
   </div>
 
   <!-- Children's Privacy -->
@@ -323,3 +178,4 @@
 
 </body>
 </html>
+
